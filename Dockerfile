@@ -10,8 +10,9 @@ RUN apt-get update && apt-get install -y \
     default-libmysqlclient-dev \
     pkg-config \
     libssl-dev \
-    netcat \
+    netcat-openbsd \
     && rm -rf /var/lib/apt/lists/*
+
 
 
 # Copy requirements and install Python packages
