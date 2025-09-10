@@ -1,12 +1,13 @@
-apiVersion: autoscaling.k8s.io/v1
-kind: VerticalPodAutoscaler
+apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: mysql-vpa
-  namespace: school-app
+  name: mysql-pv
 spec:
-  targetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: mysql-deployment
-  updatePolicy:
-    updateMode: "Auto"
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /tmp/data/mysql
+

@@ -1,3 +1,4 @@
+# mysql-pvc.yml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -8,4 +9,6 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 5Gi          # PV ke size ke equal ya less
+      storage: 5Gi
+  storageClassName: manual
+
