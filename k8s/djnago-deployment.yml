@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: django
-          image: jaishankar7655/scholl-mangemet-3tier-django:latest
+          image: jaishankar7655/django_school_app:latest
           ports:
             - containerPort: 8000
           resources:
